@@ -1,0 +1,44 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    overflow: hidden;
+}
+.container {
+    background-image: url('../images/velkro-outline.svg');
+    fill-opacity: 0.7;
+    background-repeat: no-repeat;
+    background-position-x: -30ex;
+    background-position-y: -10ex;
+    transform: rotate(-20deg);
+    transform-box: fill-box;
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.container div {
+    display: grid;
+    justify-items: center;
+}
+img {
+    margin-left: 24px;
+}
+.comingsoon {
+    color:white;
+    font-size: 1.7em;
+}
+.correo {
+    color: white;
+    border-bottom: 1px solid rgba(255,0,0,0.5);
+    text-decoration: none;
+    transition: .3s ease all;
+    padding: 8px;
+    letter-spacing: 0.05em;
+}
+.correo:hover {
+    color: red;
+    border-bottom: 1px solid red;
+}
