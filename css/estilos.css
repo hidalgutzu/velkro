@@ -1,9 +1,50 @@
+/* --- start variables */
+:root {
+    --transicion: all 0.18s ease-in-out;
+    --instagram: #bc2a8d;
+    --facebook: #1877f2;
+}
+/* --- end variables */
 body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
     background-color: black;
-    overflow: hidden;
+    height: 100%;
+    letter-spacing: 0.05em;
 }
+.header {
+    color: white;
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    grid-template-rows: 100px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 999;
+}
+/* .header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 3.5em;
+    line-height: 1em;
+    margin: 0;
+    text-transform: uppercase;
+}
+h1 span {
+    font-size: 5.5rem;
+    line-height: 1em;
+}
+
+/* coming soon */
 .container {
     background-image: url('../images/velkro-outline.svg');
     fill-opacity: 0.7;
@@ -34,11 +75,236 @@ img {
     color: white;
     border-bottom: 1px solid rgba(255,0,0,0.5);
     text-decoration: none;
-    transition: .3s ease all;
+    transition: var(--transicion);
     padding: 8px;
     letter-spacing: 0.05em;
 }
 .correo:hover {
-    color: red;
     border-bottom: 1px solid red;
+}
+/* termina coming soon */
+
+.velkro-menu ul {
+    margin: 0 auto;
+}
+.velkro-menu ul li {
+    display: table-cell;
+    font-size: 0.75em;
+    vertical-align: middle;
+    line-height: 1em;    
+}
+.velkro-menu ul li a {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    display: inline-table;
+    cursor: pointer;
+    padding: 15px;
+    text-decoration: none;  
+    transition: var(--transicion);
+}
+.velkro-menu ul li a:hover {
+    color: red;
+}
+.hide {
+    display: none !important;
+}
+.active {
+    cursor: default !important;
+    color: red !important;
+}
+/* .video-home {
+    background-image: url('../images/blackptt.png'),
+                      url('../images/bkgr@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+} */
+.video-home iframe {
+    width: 100vw;
+    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+ }
+ span.black {
+     width: 100vw;
+     height: 100vh;
+     background: black;
+ }
+
+/* -------------- HEADER -------------- */
+.logo-velkro {
+    width: 65px;
+}
+.whatsapp {
+    background-image: url('../images/whatsapp-brands.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    transition: var(--transicion);    
+}
+.whatsapp:hover {
+    background-image: url('../images/whatsapp-brands-hover.svg');
+} 
+/* -------------- HERO -------------- */
+.hero-container {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 50px;
+}
+.hero {
+    color: white;
+    text-align: center;
+}
+.hero .playreel a {
+    color: white;
+    font-family: "FontAwesome"; 
+    font-size: 3.5em;
+    text-decoration: none;
+}
+.hero .playreel {
+    display: inline-flex;
+    flex-direction: row;
+    line-height: 1em;
+    justify-content: center;
+    align-items: center;
+}
+.hero .playreel .icon-play {
+    background: url('../svgs/icon-play.svg') no-repeat center center,
+                url('../svgs/icon-play-circle.svg') no-repeat center center;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: var(--transicion);
+    border-radius: 50%;
+}
+.hero .playreel:hover .icon-play {
+    background: url('../svgs/icon-play-black.svg') no-repeat center center,
+                url('../svgs/icon-play-circle-hover.svg') no-repeat center center;
+    border-radius: 50%;
+    transform: scale(1.2);
+    opacity: 0.9;
+    box-shadow: ;
+}
+
+/* -------------- CLIENTS -------------- */
+.clients-container {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 50px;
+}
+/* -------------- FLOAT ELEMENTS -------------- */
+.social-icons {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: auto;
+    right: 20px;
+    bottom: 30px;
+}
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: "FontAwesome";  
+    padding: 5px 10px;
+    transition: var(--transicion);
+}
+/* .social-icons a .icon-facebook, 
+.social-icons a .icon-instagram,
+.social-icons a .icon-envelope {
+    transition: var(--transicion);
+}
+.social-icons a:hover .icon-facebook {
+    color: var(--facebook);
+}
+.social-icons a:hover .icon-instagram {
+    color: var(--instagram);
+} */
+.social-icons a:hover {
+    color: red;
+}
+.since {
+    font-size: 0.65em;
+    color: white;
+    width: auto;
+    left: -45px;
+    bottom: 90px;
+    transform: rotate(-90deg);
+    height: auto;
+    opacity: 0.6;
+    position: fixed;
+}
+
+/* GLICH */
+.glitch{
+  color:white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:3.5em;
+  position:relative;
+  width:400px;
+  margin:0 auto;
+  opacity: 0.9;
+  mix-blend-mode: color-dodge;
+}
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:-1px 0 red;
+  top:0;
+  color:white;
+  background:black;
+  mix-blend-mode: hard-light;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:1px 0 blue; 
+  top:0;
+  color:white;
+  background:black;
+  mix-blend-mode: hard-light;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim-2 3s infinite linear alternate-reverse;
 }
