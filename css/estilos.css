@@ -3,14 +3,39 @@
     --transicion: all 0.18s ease-in-out;
     --instagram: #bc2a8d;
     --facebook: #1877f2;
+    --color1: rgba(0,0,0,0);
+    --color2: blue;
+    --color3: white;
+    --color4: black;
 }
 /* --- end variables */
+
+html {
+    --scrollbarBG: rgb(41, 41, 41);
+    --thumbBG: red;
+  }
+  body::-webkit-scrollbar {
+    width: 11px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
+
 body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
     font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
-    background-color: black;
-    height: 100%;
+    /* background-color: black; */
+    height: 200vh;
     letter-spacing: 0.05em;
+    overflow-x: hidden !important;
+    overflow-y: auto;
 }
 .header {
     color: white;
@@ -84,6 +109,10 @@ img {
 }
 /* termina coming soon */
 
+nav {
+    background: var(--color1);
+    transition: all 350ms ease-out;
+}
 .velkro-menu ul {
     margin: 0 auto;
 }
@@ -96,12 +125,17 @@ img {
 .velkro-menu ul li a {
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
-    color: white;
+    /* color: white; */
+    /* color: var(--color1); */
     display: inline-table;
     cursor: pointer;
     padding: 15px;
     text-decoration: none;  
     transition: var(--transicion);
+}
+nav li a {
+    background: var(--color1);
+    color: var(--color3);
 }
 .velkro-menu ul li a:hover {
     color: red;
@@ -144,15 +178,21 @@ img {
 .logo-velkro {
     width: 65px;
 }
-.whatsapp {
-    background-image: url('../images/whatsapp-brands.svg');
+.whatsapp, .whatsapp-black {
     background-repeat: no-repeat;
     background-size: cover;
     width: 30px;
     height: 30px;
-    transition: var(--transicion);    
+    transition: var(--transicion); 
 }
-.whatsapp:hover {
+.whatsapp {
+    background-image: url('../images/whatsapp-brands.svg');  
+}
+.whatsapp-black {
+    background-image: url('../images/whatsapp-brands-black.svg');
+} 
+
+.whatsapp:hover, .whatsapp-black:hover {
     background-image: url('../images/whatsapp-brands-hover.svg');
 } 
 /* -------------- HERO -------------- */
@@ -182,8 +222,8 @@ img {
     align-items: center;
 }
 .hero .playreel .icon-play {
-    background: url('../svgs/icon-play.svg') no-repeat center center,
-                url('../svgs/icon-play-circle.svg') no-repeat center center;
+    background: url('../images/icon-play.svg') no-repeat center center,
+                url('../images/icon-play-circle.svg') no-repeat center center;
     background-size: contain;
     width: 60px;
     height: 60px;
@@ -193,8 +233,8 @@ img {
     border-radius: 50%;
 }
 .hero .playreel:hover .icon-play {
-    background: url('../svgs/icon-play-black.svg') no-repeat center center,
-                url('../svgs/icon-play-circle-hover.svg') no-repeat center center;
+    background: url('../images/icon-play-black.svg') no-repeat center center,
+                url('../images/icon-play-circle-hover.svg') no-repeat center center;
     border-radius: 50%;
     transform: scale(1.2);
     opacity: 0.9;
@@ -203,6 +243,7 @@ img {
 
 /* -------------- CLIENTS -------------- */
 .clients-container {
+    background-color: lightgray;
     height: 100vh;
     display: grid;
     justify-content: center;
@@ -242,6 +283,50 @@ img {
 .social-icons a:hover {
     color: red;
 }
+.icon-facebook, .icon-instagram, .icon-envelope, .icon-facebook-black, .icon-instagram-black, .icon-envelope-black {
+    transition: var(--transicion);
+}
+.icon-facebook {
+    background: url('../images/facebook-f.svg')no-repeat center center;
+}
+.icon-instagram {
+    background: url('../images/instagram.svg')no-repeat center center;
+}
+.icon-envelope {
+    background: url('../images/envelope.svg')no-repeat center center;
+}
+.icon-facebook-black {
+    background: url('../images/facebook-f-black.svg')no-repeat center center;
+}
+.icon-instagram-black {
+    background: url('../images/instagram-black.svg')no-repeat center center;
+}
+.icon-envelope-black {
+    background: url('../images/envelope-black.svg')no-repeat center center;
+}
+.icon-facebook:hover, .icon-facebook-black:hover {
+    background: url('../images/facebook-f-hover.svg')no-repeat center center;
+}
+.icon-instagram:hover, .icon-instagram-black:hover {
+    background: url('../images/instagram-hover.svg')no-repeat center center;
+}
+.icon-envelope:hover, .icon-envelope-black:hover {
+    background: url('../images/envelope-hover.svg')no-repeat center center;
+}
+.icon-facebook,
+.icon-facebook-black, 
+.icon-facebook:hover, 
+.icon-instagram,
+.icon-instagram-black,
+.icon-instagram:hover, 
+.icon-envelope,
+.icon-envelope-black,
+.icon-envelope:hover {
+    background-size: contain;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+}
 .since {
     font-size: 0.65em;
     color: white;
@@ -254,7 +339,7 @@ img {
     position: fixed;
 }
 
-/* GLICH */
+/* GLICH ---------------------- */
 .glitch{
   color:white;
   font-family: 'Josefin Sans', sans-serif;

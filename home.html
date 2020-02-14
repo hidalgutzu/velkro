@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/sanitize.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,400i,600,600i,700,700i,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700&display=swap" rel="stylesheet">
@@ -27,13 +28,13 @@
         <img src="images/velkro-logo.svg" alt="Velkro Frame ®" class="logo-velkro">
         <nav class="velkro-menu">
             <ul>
-                <li class="item"><a class="hide" href="#">Home</a></li>
-                <li class="item"><a href="#">About Us</a></li>
-                <li class="item"><a href="#">Work</a></li>
-                <li class="item"><a href="#">Services</a></li>
+                <li class="item"><a class="hide micolor" href="#">Home</a></li>
+                <li class="item"><a class="micolor" href="#">About Us</a></li>
+                <li class="item"><a class="micolor" href="#">Work</a></li>
+                <li class="item"><a class="micolor" href="#">Services</a></li>
             </ul>
         </nav>
-        <a href="#" class="whatsapp social-item" target="_blank"><span class="icon-whatsapp"></span></a>
+        <a href="#" id="whatsapp" class="whatsapp social-item" target="_blank"></a>
     </header>
     <!------- Hero ------->
     <div class="hero-container">
@@ -59,9 +60,9 @@
                     <h1>I am<br>
                     <span>Other Screen</span></h1>
                 </div>
-                <div class="playreel">
+                <!-- <div class="playreel">
                     <small>Play</small><a href=""><span class="fa-play-circle"></span></a><small>Reel</small>
-                </div> 
+                </div>  -->
                 <br>
                 <br>
                 <br>
@@ -73,9 +74,10 @@
    <!------- Float Elements ------->
     <div class="since">Velkro Frame® 2001 - 2019</div>
     <div class="social-icons">
-        <a href="http://" target="_blank" class="social-item"><span class="icon-facebook fa-1x fa-facebook"></span></a>
-        <a href="http://" target="_blank" class="social-item"><span class="icon-instagram fa-1x fa-instagram"></span></a>
-        <a href="http://" target="_blank" class="social-item"><span class="icon-envelope fa-sm fa-envelope"></span></a>
+        <!-- <a href="http://" target="_blank" class="social-item"><span class="icon-facebook fa-1x fa-facebook"></span></a> -->
+        <a href="http://" target="_blank" class="social-item"><span id="facebook" class="icon-facebook"></span></a>
+        <a href="http://" target="_blank" class="social-item"><span id="instagram" class="icon-instagram"></span></a>
+        <a href="http://" target="_blank" class="social-item"><span id="envelope" class="icon-envelope"></span></a>
     </div>
     <!-- <ul class="social-icons">
         <li><a href="http://" target="_blank" class="social-item"><span class="icon-facebook fa-lg fa-facebook"></span></a></li>
