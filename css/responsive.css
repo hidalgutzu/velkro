@@ -6,16 +6,54 @@
 }
 /* ---------------- Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
+    .box-work {
+        grid-template-columns: repeat(3, 27%);
+        align-content: center;
+        margin-top: 70px;
+    }
+
+    .header {
+        background-color: var(--negro50);
+    }
 }
 /* ---------------- Small devices (phones) */
 @media (max-width: 575.98px) {
     h1 {
         font-size: 2em;
     }
+
     h1 span {
         font-size: 3.7rem !important;
     }
+
+    .interna h1 {
+        position: relative;
+        display: grid;
+        align-self: flex-start;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-top: 0;
+    }
+
     .hero-container {
         top: 0;
+    }
+    .hero-container.interna {
+        padding-top: 120px;
+    }
+    .hero-container.interna .hero {
+        margin: 0;
+    }
+
+    .hero {
+        display: grid;
+        align-items: center;
+        margin: 120px 0;
+    }
+    .box-work {
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: 1fr;
+        align-content: start;
+        margin-top: 0;
     }
 }

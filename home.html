@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Velkro Frame® - Productions</title>
+    <title>Velkro Frame®</title>
     <meta name="robots" content="noindex" />
-    <meta name="description" content="Congratulations from our customers is our greatest satisfaction" />
-    <meta name="keywords" content="lalostyles, cancun, riviera maya, lalostyles reviews, travel services reviews" />
+    <meta name="description" content="Professional & creativity visual video production" />
+    <meta name="keywords" content="velkro frame, work, production, videos, cancun, riviera maya" />
     <meta name="author" content="Daniel Hidalgo | hidalgutzu@gmail.com" />
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="./css/all.css">
@@ -17,11 +17,15 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,400i,600,600i,700,700i,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </head>
 <body>
-    <div class="video-home">
+    <div class="video-home" >
         <span class="black"></span>
-        <iframe src="https://player.vimeo.com/video/61249855?background=1&autoplay=1&loop=1&byline=0&title=0"" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <!-- <iframe src="https://player.vimeo.com/video/61249855?background=1&autoplay=1&loop=1&byline=0&title=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+        <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/Wyiw8BKIo78?controls=0&autoplay=1&loop=1&rel=0&showinfo=0&iv_load_policy=3&playlist=Wyiw8BKIo78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-autoplay data-keepplaying></iframe>
     </div>
     <!------- Header ------->
     <header class="header">
@@ -29,9 +33,9 @@
         <nav class="velkro-menu">
             <ul>
                 <li class="item"><a class="hide micolor" href="#">Home</a></li>
-                <li class="item"><a class="micolor" href="#">About Us</a></li>
-                <li class="item"><a class="micolor" href="#">Work</a></li>
-                <li class="item"><a class="micolor" href="#">Services</a></li>
+                <li class="item"><a class="micolor" href="about.html">About Us</a></li>
+                <li class="item"><a class="micolor" href="work.html">Work</a></li>
+                <li class="item"><a class="micolor" href="services.html">Services</a></li>
             </ul>
         </nav>
         <a href="#" id="whatsapp" class="whatsapp social-item" target="_blank"></a>
@@ -48,8 +52,10 @@
                 </h1>
             </div>
             <div class="playreel">
-                <small>Play</small><a href="#"><span class="icon-play"></span></a><small>Reel</small>
-                <!-- <span class="fa-play-circle"></span> -->
+                <!-- <small>Play</small> -->
+                    <a data-fancybox href="https://www.youtube.com/watch?v=P-HZ8XHXKOU" data-youtube-id="ze_ie8Ctp60" 
+                    class="video-banner js-trigger-video-modal"><span class="icon-play"></span></a>
+                <!-- <small>Reel</small> -->
             </div> 
         </div>
     </div>
@@ -72,10 +78,13 @@
             </div>
         </div>
    <!------- Float Elements ------->
-    <div class="since">Velkro Frame® 2001 - 2019</div>
+    <div class="since">Velkro Frame® 2001 - 2020</div>
     <div class="social-icons">
-        <!-- <a href="http://" target="_blank" class="social-item"><span class="icon-facebook fa-1x fa-facebook"></span></a> -->
-        <a href="http://" target="_blank" class="social-item"><span id="facebook" class="icon-facebook"></span></a>
+        <!-- icono de facebook con font -->
+        <a href="http://" id="fa-facebook" target="_blank" class="social-item"><span class="fa-1x fa-facebook"></span></a>
+        
+        <!-- <a href="http://" target="_blank" class="social-item"><span id="facebook" class="icon-facebook"></span></a> -->
+        <!-- <a href="#" id="facebook" class="icon-facebook social-item" target="_blank"></a> -->
         <a href="http://" target="_blank" class="social-item"><span id="instagram" class="icon-instagram"></span></a>
         <a href="http://" target="_blank" class="social-item"><span id="envelope" class="icon-envelope"></span></a>
     </div>
@@ -86,5 +95,6 @@
     </ul> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/javascript.js"></script>
+        
 </body>
 </html>

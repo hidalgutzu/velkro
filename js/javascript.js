@@ -28,60 +28,33 @@
 
   /////////////////////////////////
 
-  // Cambiar de color el CSS al hacer scroll
-  "use strict";
-
-  const htmlTag = document.querySelector('html');
-  const bodyTag = document.querySelector('body');
-  const myNav = document.querySelector('nav');
-  const myElem = document.querySelectorAll('nav li a');
-  const logoVelkro = document.querySelector('.logo-velkro');
-  const since = document.querySelector('.since');
-  const iconWha = document.getElementById('whatsapp');
-  const iconFac = document.getElementById('facebook');
-  const iconIns = document.getElementById('instagram');
-  const iconEnv = document.getElementById('envelope');
-
-  let scrolled = () => {
-    let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
-    return Math.floor(dec * 100);
-  }
   
-  addEventListener('scroll',() => {
-    // Cambia de color el fondo del menú
-    // myNav.style.setProperty('background', scrolled() > 50 ? "var(--color2)" : "var(--color1)");
 
-    // Cambia de color el texto de todos los "li a" del menú
-    let i;
-    for (i = 0; i < myElem.length; i++) {
-      myElem[i].style.setProperty('color', scrolled() > 50 ? "var(--color4)" : "var(--color3)");
-    }
+       // 2. This code loads the IFrame Player API code asynchronously.
+       var tag = document.createElement('script');
 
-    // Cambia de color el "since"
-    since.style.setProperty('color', scrolled() > 50 ? "var(--color4)" : "var(--color3)");
-    // Cambia el Isologo Velkro
-    function cambiarLogos() {
-      if (scrolled() > 50) {
-        logoVelkro.src = "images/velkro-logo-black.svg";
-        iconWha.classList.add('whatsapp-black');
-        iconWha.classList.remove('whatsapp');
-        iconFac.classList.add('icon-facebook-black');
-        iconFac.classList.remove('icon-facebook');
-        iconIns.classList.add('icon-instagram-black');
-        iconIns.classList.remove('icon-instagram');
-        iconEnv.classList.add('icon-envelope-black');
-        iconEnv.classList.remove('icon-envelope');
-      } else {
-        logoVelkro.src = "images/velkro-logo.svg";
-        iconWha.classList.remove('whatsapp-black');
-        iconWha.classList.add('whatsapp');
-        iconFac.classList.remove('icon-facebook-black');
-        iconFac.classList.add('icon-facebook');
-        iconIns.classList.remove('icon-instagram-black');
-        iconIns.classList.add('icon-instagram');
-        iconEnv.classList.remove('icon-envelope-black');
-        iconEnv.classList.add('icon-envelope');
-      }
-    }
-    cambiarLogos()
-  })
+       tag.src = "https://www.youtube.com/iframe_api";
+       var firstScriptTag = document.getElementsByTagName('script')[0];
+       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+ 
+       // 3. This function creates an <iframe> (and YouTube player)
+       //    after the API code downloads.
+       var player;
+       function onYouTubeIframeAPIReady() {
+         player = new YT.Player('player', {
+           height: '390',
+           width: '640',
+           videoId: YOUR_ID_HERE,
+           playerVars: {
+             controls: 0,
+             showinfo:0,
+             rel:0,
+           },
+           events: {
+             'onReady': onPlayerReady,
+           }
+         });
+       }
+ 
+
+//Youtube Modal script
